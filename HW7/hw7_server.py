@@ -9,7 +9,7 @@ sock = socket(AF_INET, SOCK_DGRAM)
 sock.bind(('', port))
 
 while True:
-    #2
+    #server 2
     sock.settimeout(None)
     while True:
         data, addr = sock.recvfrom(BUFF_SIZE)
@@ -20,7 +20,7 @@ while True:
             print('<- ', data.decode())
             break
 
-    #1
+    #server 1
     msg = input('-> ')
     reTx = 0
     while reTx <= 3:

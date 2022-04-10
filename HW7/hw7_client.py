@@ -8,7 +8,7 @@ BUFF_SIZE = 1024
 sock = socket(AF_INET, SOCK_DGRAM)
 
 while True:
-    #1
+    #client 1
     msg = input('-> ')
     reTx = 0
     while reTx <= 3:
@@ -24,7 +24,7 @@ while True:
         else:
             break
     
-    #2
+    #client 2
     sock.settimeout(None)
     while True:
         data, addr = sock.recvfrom(BUFF_SIZE)
