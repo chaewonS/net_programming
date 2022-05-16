@@ -27,7 +27,7 @@ class http_handler(BaseHTTPRequestHandler):
             self.wfile.write(msg.encode())
 
     def process_oauth(self):
-    # 인증 코드 얻기
+    # 인증 코드 얻기 
         parsed_path = parse.urlparse(self.path)
         query = parsed_path.query
 
