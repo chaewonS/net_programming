@@ -19,7 +19,7 @@ class http_handler(BaseHTTPRequestHandler):
         else:
             self.response(404, 'Not Found')
 
-    def send_html(self):
+    def send_html(self): 
         self.send_response(200)
         self.end_headers()
         with open('index_kakao.html', 'r', encoding='utf-8') as f:
